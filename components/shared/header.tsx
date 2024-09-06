@@ -3,6 +3,7 @@ import React from "react";
 import { Container } from "./container";
 import Image from "next/image";
 import { Button } from "../ui";
+import { User } from "lucide-react";
 
 interface headerProps {
   className?: string;
@@ -24,7 +25,10 @@ export const Header: React.FC<headerProps> = ({ className }) => {
         </div>
         {/* Правая часть */}
         <div className="flex items-center gap-3">
-          <Button variant="outline">Войти</Button>
+          <Button variant="outline" className="flex items-center gap-3">
+            <User size={16} />
+            Войти
+          </Button>
         </div>
       </Container>
     </header>
