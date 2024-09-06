@@ -3,7 +3,7 @@ import React from "react";
 import { Container } from "./container";
 import Image from "next/image";
 import { Button } from "../ui";
-import { User, ShoppingCart } from "lucide-react";
+import { User, ShoppingCart, ArrowRight } from "lucide-react";
 
 interface headerProps {
   className?: string;
@@ -38,6 +38,7 @@ export const Header: React.FC<headerProps> = ({ className }) => {
                 <ShoppingCart className="h-4 w-4 relative" strokeWidth={2} />
                 <b>3</b>
               </div>
+              <ArrowRight className="w-5 absolute right-5 transition duration-300 -translate-x-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-0" />
             </Button>
           </div>
         </div>
