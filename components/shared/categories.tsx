@@ -20,7 +20,10 @@ const activeIndex = 0;
 export const Categories: React.FC<categoriesProps> = ({ className }) => {
   return (
     <div
-      className={cn("inline-flex, gap-1 bg-gray-50 p-1 rounded-2xl", className)}
+      className={cn(
+        "flex inline-flex, gap-1 bg-gray-50 p-1 rounded-2xl",
+        className
+      )}
     >
       {cats.map((cats, index) => (
         <a
@@ -31,7 +34,7 @@ export const Categories: React.FC<categoriesProps> = ({ className }) => {
           )}
           key={index}
         >
-          <button>{cat}</button>
+          <button>{cats}</button>
         </a>
       ))}
     </div>
