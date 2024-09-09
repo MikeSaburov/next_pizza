@@ -41,7 +41,87 @@ export const Filters: React.FC<filtersProps> = ({ className }) => {
         <RangeSlider min={0} max={1000} step={10} value={[0, 1000]} />
       </div>
       {/* Фильтрация по ингрединтам */}
-      <CheckboxFiltersGroup title={""} items={[]} />
+      <CheckboxFiltersGroup
+        className="mt-5"
+        limit={6}
+        title={"Ингридиенты"}
+        defaultItems={[
+          {
+            text: "Сырный соус",
+            value: "1",
+          },
+          {
+            text: "Моццарелла",
+            value: "2",
+          },
+          {
+            text: "Чеснок",
+            value: "3",
+          },
+          {
+            text: "Солённые огурчики",
+            value: "4",
+          },
+          {
+            text: "Красный лук",
+            value: "5",
+          },
+          {
+            text: "Томаты",
+            value: "6",
+          },
+        ]}
+        items={[
+          {
+            text: "Сырный соус",
+            value: "1",
+          },
+          {
+            text: "Моццарелла",
+            value: "2",
+          },
+          {
+            text: "Чеснок",
+            value: "3",
+          },
+          {
+            text: "Солённые огурчики",
+            value: "4",
+          },
+          {
+            text: "Красный лук",
+            value: "5",
+          },
+          {
+            text: "Томаты",
+            value: "6",
+          },
+          {
+            text: "Сырный соус",
+            value: "1",
+          },
+          {
+            text: "Моццарелла",
+            value: "2",
+          },
+          {
+            text: "Чеснок",
+            value: "3",
+          },
+          {
+            text: "Солённые огурчики",
+            value: "4",
+          },
+          {
+            text: "Красный лук",
+            value: "5",
+          },
+          {
+            text: "Томаты",
+            value: "6",
+          },
+        ]}
+      />
     </div>
   );
 };
