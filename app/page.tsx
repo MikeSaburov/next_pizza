@@ -1,4 +1,4 @@
-import { Container, Title, Categories } from "@/components/shared";
+import { Container, Title, Categories, SortPopup } from "@/components/shared";
 
 export default function Home() {
   return (
