@@ -8,7 +8,7 @@ interface filtersProps {
 export const Filters: React.FC<filtersProps> = ({ className }) => {
   return (
     <div className={className}>
-      <Title text="Фильтрация" size="sm" className="my-5 font-bold" />
+      <Title text="Фильтрация" size="sm" className="mb-5 font-bold" />
     </div>
   );
 };
