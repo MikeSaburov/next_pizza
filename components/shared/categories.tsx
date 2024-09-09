@@ -25,7 +25,7 @@ export const Categories: React.FC<categoriesProps> = ({ className }) => {
         className
       )}
     >
-      {cats.map((cats, index) => (
+      {cats.map((name, index) => (
         <a
           className={cn(
             "flex items-center font-bold h-11 rounded-2xl px-5",
@@ -34,7 +34,7 @@ export const Categories: React.FC<categoriesProps> = ({ className }) => {
           )}
           key={index}
         >
-          <button>{cats}</button>
+          <button>{name}</button>
         </a>
       ))}
     </div>
