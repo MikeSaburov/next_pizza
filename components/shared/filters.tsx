@@ -1,4 +1,5 @@
 import React from "react";
+
 import { Title } from "./title";
 import { FilterCheckbox } from "./filter-checkbox";
 import { Input } from "../ui";
@@ -43,8 +44,8 @@ export const Filters: React.FC<filtersProps> = ({ className }) => {
       {/* Фильтрация по ингрединтам */}
       <CheckboxFiltersGroup
         className="mt-5"
-        limit={6}
-        title={"Ингридиенты"}
+        limit={2}
+        title="Ингридиенты"
         defaultItems={[
           {
             text: "Сырный соус",
@@ -72,30 +73,6 @@ export const Filters: React.FC<filtersProps> = ({ className }) => {
           },
         ]}
         items={[
-          {
-            text: "Сырный соус",
-            value: "1",
-          },
-          {
-            text: "Моццарелла",
-            value: "2",
-          },
-          {
-            text: "Чеснок",
-            value: "3",
-          },
-          {
-            text: "Солённые огурчики",
-            value: "4",
-          },
-          {
-            text: "Красный лук",
-            value: "5",
-          },
-          {
-            text: "Томаты",
-            value: "6",
-          },
           {
             text: "Сырный соус",
             value: "1",

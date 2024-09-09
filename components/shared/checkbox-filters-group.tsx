@@ -11,9 +11,9 @@ interface checkboxFiltersGroupProps {
   defaultItems?: Item[];
   limit?: number;
   searchInputPlaceholder?: string;
+  className?: string;
   onChange?: (values: string[]) => void;
   defaultValue?: string[];
-  className?: string;
 }
 
 export const CheckboxFiltersGroup: React.FC<checkboxFiltersGroupProps> = ({
