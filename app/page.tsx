@@ -63,6 +63,44 @@ export default function Home() {
                 ]}
                 categoryId={1}
               />
+              <ProductsGroupList
+                title={"Комбо"}
+                items={[
+                  {
+                    id: 1,
+                    name: "Бургер пицца",
+                    price: 100,
+                    imageUrl:
+                      "https://media.dodostatic.net/image/r:233x233/11EE7D61698827EE9B8DB6D0AEC53410.avif",
+                    items: [{ price: 550 }],
+                  },
+                  {
+                    id: 1,
+                    name: "Супер пицца",
+                    price: 100,
+                    imageUrl:
+                      "https://media.dodostatic.net/image/r:233x233/11EE7D6101F670D6AA756B1C989E0489.avif",
+                    items: [{ price: 550 }],
+                  },
+                  {
+                    id: 1,
+                    name: "Пепперони",
+                    price: 100,
+                    imageUrl:
+                      "https://media.dodostatic.net/image/r:233x233/11EE7D610A62D78598406363A9A8AD65.avif",
+                    items: [{ price: 550 }],
+                  },
+                  {
+                    id: 1,
+                    name: "Гавайская",
+                    price: 100,
+                    imageUrl:
+                      "https://media.dodostatic.net/image/r:233x233/11EE7D617E9339CFB185921A343AD8FD.avif",
+                    items: [{ price: 550 }],
+                  },
+                ]}
+                categoryId={1}
+              />
             </div>
           </div>
         </div>
