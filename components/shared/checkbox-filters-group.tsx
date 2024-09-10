@@ -27,9 +27,19 @@ export const CheckboxFiltersGroup: React.FC<checkboxFiltersGroupProps> = ({
   defaultValue,
 }) => {
   const [showAll, setShowAll] = React.useState(false);
+  const [searchValue, setSearchValue] = React.useState("");
 
   // если showAll = true, то покажи все элементы, иначе отобрази то количество, которое указано в limit
-  const list = showAll ? items : defaultItems?.slice(0, limit);
+  const list = showAll
+    ? items.filter((item) =>
+        item.text.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase())
+      )
+    : defaultItems.slice(0, limit);
+
+  //поиск
+  const onChangeSearchInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchValue(e.target.value);
+  };
 
   return (
     <div className={className}>
@@ -38,6 +48,7 @@ export const CheckboxFiltersGroup: React.FC<checkboxFiltersGroupProps> = ({
       {showAll && (
         <div className="mb-5">
           <Input
+            onChange={onChangeSearchInput}
             placeholder={searchInputPlaceholder}
             className="bg-gray-50 border-none"
           />
