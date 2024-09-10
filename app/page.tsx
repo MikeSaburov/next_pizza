@@ -25,7 +25,14 @@ export default function Home() {
           {/* Список товаров */}
           <div className="flex-1">
             <div className="flex flex-col gap-16">
-              <ProductCard id={0} name={""} price={0} imageUrl={""} />
+              <ProductCard
+                id={0}
+                name={"Чизбургер-пицца"}
+                price={550}
+                imageUrl={
+                  "https://media.dodostatic.net/image/r:233x233/11EE7D61698827EE9B8DB6D0AEC53410.avif"
+                }
+              />
             </div>
           </div>
         </div>
