@@ -37,7 +37,7 @@ export default function Home() {
                     items: [{ price: 550 }],
                   },
                   {
-                    id: 1,
+                    id: 2,
                     name: "Супер пицца",
                     price: 100,
                     imageUrl:
@@ -45,7 +45,7 @@ export default function Home() {
                     items: [{ price: 550 }],
                   },
                   {
-                    id: 1,
+                    id: 3,
                     name: "Пепперони",
                     price: 100,
                     imageUrl:
@@ -53,7 +53,7 @@ export default function Home() {
                     items: [{ price: 550 }],
                   },
                   {
-                    id: 1,
+                    id: 4,
                     name: "Гавайская",
                     price: 100,
                     imageUrl:
@@ -67,7 +67,7 @@ export default function Home() {
                 title={"Комбо"}
                 items={[
                   {
-                    id: 1,
+                    id: 11,
                     name: "Бургер пицца",
                     price: 100,
                     imageUrl:
@@ -75,7 +75,7 @@ export default function Home() {
                     items: [{ price: 550 }],
                   },
                   {
-                    id: 1,
+                    id: 12,
                     name: "Супер пицца",
                     price: 100,
                     imageUrl:
@@ -83,7 +83,7 @@ export default function Home() {
                     items: [{ price: 550 }],
                   },
                   {
-                    id: 1,
+                    id: 13,
                     name: "Пепперони",
                     price: 100,
                     imageUrl:
@@ -91,7 +91,7 @@ export default function Home() {
                     items: [{ price: 550 }],
                   },
                   {
-                    id: 1,
+                    id: 14,
                     name: "Гавайская",
                     price: 100,
                     imageUrl:
@@ -99,7 +99,7 @@ export default function Home() {
                     items: [{ price: 550 }],
                   },
                 ]}
-                categoryId={1}
+                categoryId={2}
               />
             </div>
           </div>
