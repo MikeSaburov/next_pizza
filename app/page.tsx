@@ -3,7 +3,7 @@ import {
   Filters,
   Title,
   TopBar,
-  ProductCard,
+  ProductsGroupList,
 } from "@/components/shared";
 
 export default function Home() {
@@ -25,13 +25,43 @@ export default function Home() {
           {/* Список товаров */}
           <div className="flex-1">
             <div className="flex flex-col gap-16">
-              <ProductCard
-                id={0}
-                name={"Чизбургер-пицца"}
-                price={550}
-                imageUrl={
-                  "https://media.dodostatic.net/image/r:233x233/11EE7D61698827EE9B8DB6D0AEC53410.avif"
-                }
+              <ProductsGroupList
+                title={"Пиццы"}
+                items={[
+                  {
+                    id: 1,
+                    name: "Бургер пицца",
+                    price: 100,
+                    imageUrl:
+                      "https://media.dodostatic.net/image/r:233x233/11EE7D61698827EE9B8DB6D0AEC53410.avif",
+                    items: [{ price: 550 }],
+                  },
+                  {
+                    id: 1,
+                    name: "Бургер пицца",
+                    price: 100,
+                    imageUrl:
+                      "https://media.dodostatic.net/image/r:233x233/11EE7D61698827EE9B8DB6D0AEC53410.avif",
+                    items: [{ price: 550 }],
+                  },
+                  {
+                    id: 1,
+                    name: "Бургер пицца",
+                    price: 100,
+                    imageUrl:
+                      "https://media.dodostatic.net/image/r:233x233/11EE7D61698827EE9B8DB6D0AEC53410.avif",
+                    items: [{ price: 550 }],
+                  },
+                  {
+                    id: 1,
+                    name: "Бургер пицца",
+                    price: 100,
+                    imageUrl:
+                      "https://media.dodostatic.net/image/r:233x233/11EE7D61698827EE9B8DB6D0AEC53410.avif",
+                    items: [{ price: 550 }],
+                  },
+                ]}
+                categoryId={1}
               />
             </div>
           </div>
