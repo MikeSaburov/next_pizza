@@ -1,11 +1,37 @@
 import React from "react";
+import { Title } from "./title";
+import { cn } from "@/lib/utils";
+import { ProductCard } from "./product-card";
 
 interface productsGroupListProps {
+  title: string;
+  items: any[];
   className?: string;
+  listClassName?: string;
+  categoryId: number;
 }
 
 export const ProductsGroupList: React.FC<productsGroupListProps> = ({
+  title,
+  items,
   className,
+  listClassName,
+  categoryId,
 }) => {
-  return <div className={className}></div>;
+  return (
+    <div className={className}>
+      <Title text={title} size="lg" className="font-extrabold mb-5" />
+      <div className={cn("grid grid-cols-3 gap-[50px]", listClassName)}>
+        {items.map((product, i) => (
+          <ProductCard
+            key={product.id}
+            name={product.name}
+            imageUrl={product.imageUrl}
+            price={390}
+            id={product.id}
+          />
+        ))}
+      </div>
+    </div>
+  );
 };
