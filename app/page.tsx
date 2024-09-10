@@ -38,26 +38,26 @@ export default function Home() {
                   },
                   {
                     id: 1,
-                    name: "Бургер пицца",
+                    name: "Супер пицца",
                     price: 100,
                     imageUrl:
-                      "https://media.dodostatic.net/image/r:233x233/11EE7D61698827EE9B8DB6D0AEC53410.avif",
+                      "https://media.dodostatic.net/image/r:233x233/11EE7D6101F670D6AA756B1C989E0489.avif",
                     items: [{ price: 550 }],
                   },
                   {
                     id: 1,
-                    name: "Бургер пицца",
+                    name: "Пепперони",
                     price: 100,
                     imageUrl:
-                      "https://media.dodostatic.net/image/r:233x233/11EE7D61698827EE9B8DB6D0AEC53410.avif",
+                      "https://media.dodostatic.net/image/r:233x233/11EE7D610A62D78598406363A9A8AD65.avif",
                     items: [{ price: 550 }],
                   },
                   {
                     id: 1,
-                    name: "Бургер пицца",
+                    name: "Гавайская",
                     price: 100,
                     imageUrl:
-                      "https://media.dodostatic.net/image/r:233x233/11EE7D61698827EE9B8DB6D0AEC53410.avif",
+                      "https://media.dodostatic.net/image/r:233x233/11EE7D617E9339CFB185921A343AD8FD.avif",
                     items: [{ price: 550 }],
                   },
                 ]}
