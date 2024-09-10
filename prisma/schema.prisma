@@ -8,12 +8,18 @@ datasource db {
 }
 
 model User {
-    id Int @id @default(autoincrement())
+    id        Int      @id @default(autoincrement())
+    fullName  String
+    email     String
+    password  String
+    createdAt DateTime @default(now())
+    updateAt  DateTime @updatedAt
+}
 
-    fullName String
-    email    String
-    password String
-
+model Product {
+    id        Int      @id @default(autoincrement())
+    name      String
+    imageUrl  String
     createdAt DateTime @default(now())
     updateAt  DateTime @updatedAt
 }
