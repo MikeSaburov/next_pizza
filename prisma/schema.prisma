@@ -21,14 +21,30 @@ model Category {
     id       Int       @id @default(autoincrement())
     name     String    @unique
     products Product[]
+
+    createdAt DateTime @default(now())
+    updateAt  DateTime @updatedAt
 }
 
 model Product {
-    id         Int      @id @default(autoincrement())
-    name       String
-    imageUrl   String
-    category   Category @relation(fields: [categoryId], references: [id])
-    categoryId Int
-    createdAt  DateTime @default(now())
-    updateAt   DateTime @updatedAt
+    id          Int          @id @default(autoincrement())
+    name        String
+    imageUrl    String
+    category    Category     @relation(fields: [categoryId], references: [id])
+    categoryId  Int
+    createdAt   DateTime     @default(now())
+    updateAt    DateTime     @updatedAt
+    ingredients Ingredient[]
+}
+
+model Ingredient {
+    id       Int    @id @default(autoincrement())
+    name     String @unique
+    price    Int
+    imageUrl String
+
+    products Product[]
+
+    createdAt DateTime @default(now())
+    updateAt  DateTime @updatedAt
 }
