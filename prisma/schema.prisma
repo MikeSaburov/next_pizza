@@ -16,6 +16,7 @@ model User {
     createdAt DateTime @default(now())
     updateAt  DateTime @updatedAt
     Cart      Cart[]
+    Order     Order[]
 }
 
 model Category {
@@ -95,4 +96,25 @@ model CartItem {
 
     createdAt DateTime @default(now())
     updateAt  DateTime @updatedAt
+}
+
+// Заказ
+model Order {
+    id Int @id @default(autoincrement())
+
+    user   User? @relation(fields: [userId], references: [id])
+    userId Int?
+
+    totalAmount Int
+    status      OrderStatus
+    token       String
+
+    createdAt DateTime @default(now())
+    updateAt  DateTime @updatedAt
+}
+
+enum OrderStatus {
+    PENDING
+    SUCCEEDED
+    CANCLLED
 }
