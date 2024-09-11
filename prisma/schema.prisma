@@ -9,15 +9,19 @@ datasource db {
 }
 
 model User {
-    id               Int               @id @default(autoincrement())
-    fullName         String
-    email            String            @unique
-    password         String
-    createdAt        DateTime          @default(now())
-    updateAt         DateTime          @updatedAt
+    id Int @id @default(autoincrement())
+
+    fullName String
+    email    String   @unique
+    password String
+    role     UserRole
+
     cart             Cart[]
     orders           Order[]
     verificationCode VerificationCode?
+
+    createdAt DateTime @default(now())
+    updateAt  DateTime @updatedAt
 }
 
 model Category {
@@ -139,4 +143,9 @@ enum OrderStatus {
     PENDING
     SUCCEEDED
     CANCLLED
+}
+
+enum UserRole {
+    USER
+    ADMIN
 }
