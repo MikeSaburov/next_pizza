@@ -15,8 +15,8 @@ model User {
     password  String
     createdAt DateTime @default(now())
     updateAt  DateTime @updatedAt
-    Cart      Cart[]
-    Order     Order[]
+    cart      Cart[]
+    orders    Order[]
 }
 
 model Category {
@@ -107,7 +107,17 @@ model Order {
 
     totalAmount Int
     status      OrderStatus
+    paymentid   String? //идентификатор оплаты
     token       String
+
+    items Json //список продуктов
+
+    // Информация о том кому заказаны продукты
+    fullName String
+    address  String
+    email    String
+    phone    String
+    comment  String
 
     createdAt DateTime @default(now())
     updateAt  DateTime @updatedAt
