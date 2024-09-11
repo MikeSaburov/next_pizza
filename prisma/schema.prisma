@@ -17,6 +17,11 @@ model User {
     updateAt  DateTime @updatedAt
 }
 
+model Category {
+    id   Int    @id @default(autoincrement())
+    name String @unique
+}
+
 model Product {
     id        Int      @id @default(autoincrement())
     name      String
