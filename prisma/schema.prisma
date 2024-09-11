@@ -14,7 +14,10 @@ model User {
     fullName String
     email    String   @unique
     password String
-    role     UserRole
+    role     UserRole @default(USER)
+
+    provider   String? //опциональное поле
+    providerId String? //опциональное поле
 
     cart             Cart?
     orders           Order[]
@@ -74,15 +77,18 @@ model ProductItem {
 
 // Модель корзины
 model Cart {
-    id          Int    @id @default(autoincrement())
-    user        User?  @relation(fields: [userId], references: [id])
-    userId      Int    @unique
+    id Int @id @default(autoincrement())
+
+    user   User? @relation(fields: [userId], references: [id])
+    userId Int   @unique
+
+    items CartItem[]
+
     totalAmount Int    @default(0)
     token       String
 
-    createdAt DateTime   @default(now())
-    updateAt  DateTime   @updatedAt
-    items     CartItem[]
+    createdAt DateTime @default(now())
+    updateAt  DateTime @updatedAt
 }
 
 // Продукт в корзине
