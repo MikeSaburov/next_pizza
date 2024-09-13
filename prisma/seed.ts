@@ -1,4 +1,4 @@
-import { create } from 'zustand';
+import {bc} from "bcryptjs"
 import { prisma } from "./prisma-client";
 
 
@@ -16,7 +16,8 @@ async function up() {
             {
                 fullName: "user",
                 email: "usern@test.ru",
-                password: "user",
+                password: hashSync("user",10),
+                verified: new Date(),
                 role: "USER",
             },
         ]
@@ -25,7 +26,7 @@ async function up() {
 
 // очищаем даннные
 async function down() {
-
+    await prisma.$executeRaw`TRUNCATE TABLE "User" RESTART IDENTITY CASCADE`;
 }
 async function main() {
     try {
