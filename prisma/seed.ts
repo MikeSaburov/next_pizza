@@ -1,5 +1,6 @@
 import {hashSync} from "bcrypt";
 import { prisma } from "./prisma-client";
+import { categories } from "./constants";
 
 
 // генерируем даннные
@@ -22,7 +23,12 @@ async function up() {
             },
         ]
     })
+    await prisma.category.createMany({
+        data: categories
+    })
 }
+
+
 
 // очищаем даннные
 async function down() {
